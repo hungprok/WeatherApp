@@ -55,7 +55,7 @@ class App extends Component {
   currentWeather = async (lat, lng) => {
     try {
       // const api = "c034d9962f7e8539fb7b5ae6c5b9c217";
-      let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${process.env.REACT_APP_APIkey}&units=metric`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${process.env.REACT_APP_APIkey}&units=metric`;
       let data = await fetch(url);
       let result = await data.json();
       if (result.cod * 1 === 200) {
